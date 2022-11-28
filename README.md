@@ -8,8 +8,6 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -33,7 +31,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](localhost:3000)
+- [Live Demo Link](https://marvelous-melomakarona-b605be.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
