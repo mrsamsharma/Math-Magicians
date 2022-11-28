@@ -84,7 +84,7 @@ To run the project, execute the following command:
 
 👤 **Satyam Sharma**
 
-- GitHub: [@samWfelcie](https://github.com/samWfelice)
+- GitHub: [@samWfelcie](https://github.com/mrsamsharma)
 - Twitter: [@samwfelice](https://twitter.com/samwfelice)
 - LinkedIn: [samfelice](https://www.linkedin.com/in/samfelice)
 
