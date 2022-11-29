@@ -1,37 +1,28 @@
-import DigitButton from "./digitButton";
+const Calculator = () => (
+  <div className="calculator-grid">
+    <div className="output">
+      <div className="operand">0</div>
+    </div>
+    <button type="button">AC</button>
+    <button type="button">+/-</button>
+    <button type="button">%</button>
+    <button type="button">÷</button>
+    <button type="button">7</button>
+    <button type="button">8</button>
+    <button type="button">9</button>
+    <button type="button">X</button>
+    <button type="button">4</button>
+    <button type="button">5</button>
+    <button type="button">6</button>
+    <button type="button">-</button>
+    <button type="button">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+    <button type="button">+</button>
+    <button type="button">0</button>
+    <button type="button">.</button>
+    <button type="button" className="span-two">=</button>
+  </div>
+);
 
-class Calculator extends React.Component {
-    constructor(props){
-        super(props)
-    }
-    render() {
-      return (
-        <div className="calculator-grid">
-          <div className="output">
-            <div className="operand">0</div>
-          </div>
-          <button>AC</button>
-          <DigitButton operation="+/-" />
-          <DigitButton operation="%" />
-          <DigitButton operation="÷" />
-          <DigitButton digit="7" />
-          <DigitButton digit="8" />
-          <DigitButton digit="9" />
-          <DigitButton operation="X" />
-          <DigitButton digit="4" />
-          <DigitButton digit="5" />
-          <DigitButton digit="6" />
-          <DigitButton operation="-" />
-          <DigitButton digit="1" />
-          <DigitButton digit="2" />
-          <DigitButton digit="3" />
-          <DigitButton operation="+" />
-          <DigitButton digit="0" />
-          <DigitButton digit="." />
-          <button className="span-two">=</button>
-        </div>
-      );
-    }
-  }
-
-  export default Calculator;
+export default Calculator;
