@@ -1,20 +1,15 @@
-import React from 'react';
+import { useState, React } from 'react';
 import '../styles.css';
 import calculate from '../logic/calculate';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { total: 0, next: null, operation: null };
-  }
-
-  eventHandle = (e) => {
+function Calculator() {
+  
+ const eventHandle = (e) => {
     this.setState((state) => calculate(state, e.target.textContent));
   }
 
-  render() {
-    const { total, next, operation } = this.state;
+  const { total, next, operation } = this.state;
     return (
       <div className="calculator-grid">
         <div className="output">
@@ -45,7 +40,7 @@ class Calculator extends React.Component {
         <button type="button" className="span-two" onClick={this.eventHandle}>=</button>
       </div>
     );
-  }
+  
 }
 
 export default Calculator;
