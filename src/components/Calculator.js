@@ -1,32 +1,48 @@
 import React from 'react';
 import '../styles.css';
+import calculate from '../logic/calculate';
+
 // eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { total: 0, next: null, operation: null };
+  }
+
+  eventHandle = (e) => {
+    this.setState((state) => calculate(state, e.target.textContent));
+  }
+
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="calculator-grid">
         <div className="output">
-          <div className="operand">0</div>
+          <div className="operand">
+            {total}
+            {operation}
+            {next}
+          </div>
         </div>
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
+        <button type="button" onClick={this.eventHandle}>AC</button>
+        <button type="button" onClick={this.eventHandle}>+/-</button>
         <button type="button">%</button>
-        <button className="orange" type="button">÷</button>
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button className="orange" type="button">x</button>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button className="orange" type="button">-</button>
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button className="orange" type="button">+</button>
-        <button type="button">0</button>
-        <button type="button">.</button>
-        <button type="button" className="span-two">=</button>
+        <button className="orange" type="button" onClick={this.eventHandle}>÷</button>
+        <button type="button" onClick={this.eventHandle}>7</button>
+        <button type="button" onClick={this.eventHandle}>8</button>
+        <button type="button" onClick={this.eventHandle}>9</button>
+        <button className="orange" type="button" onClick={this.eventHandle}>x</button>
+        <button type="button" onClick={this.eventHandle}>4</button>
+        <button type="button" onClick={this.eventHandle}>5</button>
+        <button type="button" onClick={this.eventHandle}>6</button>
+        <button className="orange" type="button" onClick={this.eventHandle}>-</button>
+        <button type="button" onClick={this.eventHandle}>1</button>
+        <button type="button" onClick={this.eventHandle}>2</button>
+        <button type="button" onClick={this.eventHandle}>3</button>
+        <button className="orange" type="button" onClick={this.eventHandle}>+</button>
+        <button type="button" onClick={this.eventHandle}>0</button>
+        <button type="button" onClick={this.eventHandle}>.</button>
+        <button type="button" className="span-two" onClick={this.eventHandle}>=</button>
       </div>
     );
   }
