@@ -4,12 +4,17 @@ import calculate from '../logic/calculate';
 
 // eslint-disable-next-line react/prefer-stateless-function
 function Calculator() {
-  
+  const [data, setData] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
+
  const eventHandle = (e) => {
-    this.setState((state) => calculate(state, e.target.textContent));
+    setData((data) => calculate(data, e.target.textContent));
   }
 
-  const { total, next, operation } = this.state;
+  const { total, next, operation } = data;
     return (
       <div className="calculator-grid">
         <div className="output">
