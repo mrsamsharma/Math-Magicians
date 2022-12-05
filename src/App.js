@@ -1,5 +1,5 @@
 import React from 'react';
-import Calculator from './pages/Calculator';
+import Home from './pages/Home';
 import Navbar from './components/Navbar';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
-        <Calculator />
+        <Home />
       </>
     );
   }

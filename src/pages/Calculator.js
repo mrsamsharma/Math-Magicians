@@ -3,6 +3,7 @@ import '../styles.css';
 import calculate from '../logic/calculate';
 import Digit from '../components/Digit';
 import Operation from '../components/Operation';
+import Navbar from '../components/Navbar';
 
 // eslint-disable-next-line react/prefer-stateless-function
 function Calculator() {
@@ -19,6 +20,7 @@ function Calculator() {
   const { total, next, operation } = data;
   return (
     <>
+      <Navbar />
       <h1 className="heading">Let&apos;s do some Maths!</h1>
       <div className="calculator-grid">
         <div className="output">
