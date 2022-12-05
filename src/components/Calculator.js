@@ -1,6 +1,8 @@
 import { useState, React } from 'react';
 import '../styles.css';
 import calculate from '../logic/calculate';
+import Digit from './Digit';
+import Operation from './Operation';
 
 // eslint-disable-next-line react/prefer-stateless-function
 function Calculator() {
@@ -26,24 +28,24 @@ function Calculator() {
             {next}
           </div>
         </div>
-        <button type="button" onClick={eventHandle}>AC</button>
-        <button type="button" onClick={eventHandle}>+/-</button>
-        <button type="button" onClick={eventHandle}>%</button>
-        <button className="orange" type="button" onClick={eventHandle}>÷</button>
-        <button type="button" onClick={eventHandle}>7</button>
-        <button type="button" onClick={eventHandle}>8</button>
-        <button type="button" onClick={eventHandle}>9</button>
-        <button className="orange" type="button" onClick={eventHandle}>x</button>
-        <button type="button" onClick={eventHandle}>4</button>
-        <button type="button" onClick={eventHandle}>5</button>
-        <button type="button" onClick={eventHandle}>6</button>
-        <button className="orange" type="button" onClick={eventHandle}>-</button>
-        <button type="button" onClick={eventHandle}>1</button>
-        <button type="button" onClick={eventHandle}>2</button>
-        <button type="button" onClick={eventHandle}>3</button>
-        <button className="orange" type="button" onClick={eventHandle}>+</button>
-        <button type="button" onClick={eventHandle}>0</button>
-        <button type="button" onClick={eventHandle}>.</button>
+        <Operation operation="AC" eventHandle={eventHandle} />
+        <Operation operation="+/-" eventHandle={eventHandle} />
+        <Operation operation="%" eventHandle={eventHandle} />
+        <Operation operation="÷" eventHandle={eventHandle} />
+        <Digit digit="7" eventHandle={eventHandle} />
+        <Digit digit="8" eventHandle={eventHandle} />
+        <Digit digit="9" eventHandle={eventHandle} />
+        <Operation operation="x" eventHandle={eventHandle} />
+        <Digit digit="4" eventHandle={eventHandle} />
+        <Digit digit="5" eventHandle={eventHandle} />
+        <Digit digit="6" eventHandle={eventHandle} />
+        <Operation operation="-" eventHandle={eventHandle} />
+        <Digit digit="1" eventHandle={eventHandle} />
+        <Digit digit="2" eventHandle={eventHandle} />
+        <Digit digit="3" eventHandle={eventHandle} />
+        <Operation operation="+" eventHandle={eventHandle} />
+        <Digit digit="0" eventHandle={eventHandle} />
+        <Digit digit="." eventHandle={eventHandle} />
         <button type="button" className="span-two" onClick={eventHandle}>=</button>
       </div>
     </>
