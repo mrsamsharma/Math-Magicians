@@ -5,7 +5,6 @@ import Digit from '../components/Digit';
 import Operation from '../components/Operation';
 import Navbar from '../components/Navbar';
 
-// eslint-disable-next-line react/prefer-stateless-function
 function Calculator() {
   const [data, setData] = useState({
     total: 0,
