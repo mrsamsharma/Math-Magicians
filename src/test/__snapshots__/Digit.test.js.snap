@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Digit Component renders correctly 1`] = `
+<button
+  onClick={Object {}}
+  type="button"
+>
+  1
+</button>
+`;

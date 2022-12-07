@@ -1,6 +1,5 @@
 import Big from 'big.js';
-
-const operate = require('./operate');
+import operate from '../logic/operate';
 
 const one = Big(1); 
 const two = Big(2); 

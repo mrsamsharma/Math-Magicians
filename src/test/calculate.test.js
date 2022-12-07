@@ -1,4 +1,4 @@
-const calculate = require('./calculate');
+import calculate from '../logic/calculate';
 
 test('AC equals 0', () => {
     expect(calculate({ total: '3', next: '2', operation: '+', }, 'AC')).toEqual({ total: null, next: null, operation: null, });
