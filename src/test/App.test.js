@@ -11,7 +11,7 @@ test('If the user click on Calculator, the DOM is updated', () => {
     expect(screen.getByRole('link', {  name: /calculator/i})).toBeInTheDocument();
 });
 
-test('If the user click on button 7, 7 will be printed in calculator', () => {
+test('If the user multiplies 7 x 3, 21 will be printed in calculator', () => {
     render (<Calculator />, {wrapper: MemoryRouter});
     userEvent.click(screen.getByRole('button', {name: /7/i}))
     userEvent.click(screen.getByRole('button', {name: /x/i}))
