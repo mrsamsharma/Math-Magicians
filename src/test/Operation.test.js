@@ -1,10 +1,10 @@
 import React from 'react';
-import Operation from '../components/Operation';
 import renderer from 'react-test-renderer';
+import Operation from '../components/Operation';
 
 it('Operation Component renders correctly', () => {
-    const tree = renderer
-      .create(<Operation />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  const tree = renderer
+    .create(<Operation />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
