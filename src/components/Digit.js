@@ -8,11 +8,11 @@ export default function Digit({ digit, eventHandle }) {
 }
 
 Digit.propTypes = {
-  digit: PropTypes.number,
+  digit: PropTypes.string,
   eventHandle: PropTypes.func,
 };
 
 Digit.defaultProps = {
-  digit: 1,
+  digit: '1',
   eventHandle: { },
 };

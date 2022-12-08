@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Operation Component renders correctly 1`] = `
+<button
+  className="orange"
+  data-testid="+"
+  onClick={Object {}}
+  type="button"
+>
+  +
+</button>
+`;

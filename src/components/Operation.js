@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Operation({ operation, eventHandle }) {
   return (
-    <button type="button" className="orange" onClick={eventHandle}>{operation}</button>
+    <button type="button" data-testid={operation} className="orange" onClick={eventHandle}>{operation}</button>
   );
 }
 
