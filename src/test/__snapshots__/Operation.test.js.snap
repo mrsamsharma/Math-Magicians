@@ -3,6 +3,7 @@
 exports[`Operation Component renders correctly 1`] = `
 <button
   className="orange"
+  data-testid="+"
   onClick={Object {}}
   type="button"
 >

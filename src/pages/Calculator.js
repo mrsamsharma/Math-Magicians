@@ -23,7 +23,7 @@ function Calculator() {
       <h1 className="heading">Let&apos;s do some Maths!</h1>
       <div className="calculator-grid">
         <div className="output">
-          <div className="operand">
+          <div className="operand" data-testid="operand">
             {total}
             {operation}
             {next}
