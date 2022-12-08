@@ -11,6 +11,12 @@ test('If the user click on Calculator, the DOM is updated', () => {
   expect(screen.getByRole('link', { name: /calculator/i })).toBeInTheDocument();
 });
 
+test('If the user click on Home, the DOM is updated', () => {
+  render(<App />, { wrapper: MemoryRouter });
+  userEvent.click(screen.getByRole('link', { name: /home/i }));
+  expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
+});
+
 test('If the user click on Quote, the DOM is updated', () => {
   render(<App />, { wrapper: MemoryRouter });
   userEvent.click(screen.getByRole('link', { name: /quote/i }));
@@ -26,7 +32,7 @@ test('If the user clicks on AC, nothing will be printed in calculator', () => {
 test('If the user clicks on 7 and +/-, -7 will be printed in calculator', () => {
   render(<Calculator />, { wrapper: MemoryRouter });
   userEvent.click(screen.getByRole('button', { name: /7/i }));
-  userEvent.click(screen.getByRole('button', {  name: /\+\/\-/i}));
+  userEvent.click(screen.getByTestId('+/-'));
   expect(screen.getByText(/-7/i)).toBeInTheDocument();
 });
 
@@ -145,7 +151,7 @@ test('If the click number 0 1 0, 10 will be printed in calculator', () => {
 test('If the click on 1 . 5, 1.5 will be printed in calculator', () => {
   render(<Calculator />, { wrapper: MemoryRouter });
   userEvent.click(screen.getByRole('button', { name: /1/i }));
-  userEvent.click(screen.getByRole('button', {  name: /\./i}));
+  userEvent.click(screen.getByRole('button', { name: /\./i }));
   userEvent.click(screen.getByRole('button', { name: /5/i }));
   expect(screen.getByText(/1.5/i)).toBeInTheDocument();
 });
