@@ -31,7 +31,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://marvelous-melomakarona-b605be.netlify.app/)
+- [Live Demo Link](https://mathmagicians.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
